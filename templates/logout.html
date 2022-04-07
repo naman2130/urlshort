@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="wrapper">
+        <div class="menu">
+            <div class=logo><h1>code-HAK</h1></div>
+                <div class=pages>
+                    <a class="btn btn-primary" href="{% url 'register' %}">Sign in/up</a>
+                    <a class="btn btn-primary" href="{% url 'main' %}">Go to main</a>
+                </div>
+        </div>
+        <div class="ok" style="padding: 35px;">
+            You have logged out!
+        </div>
+    </div>
+{% endblock %}

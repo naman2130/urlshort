@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="wrapper">
+        <div class="menu">
+            <div class=logo><h1>code-HAK</h1></div>
+            <div class=pages>
+               <a class="btn btn-primary" href="{% url 'main' %}">Main</a>
+            </div>
+        </div>
+        <div class="container-fluid" style="padding: 35px;">
+            <div class="container">
+                <div class="row">
+                    <form method="post" action="{% url 'login' %}" class="auth-form">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                        <a href="{% url 'register' %}" class="btn btn-primary">Register new account</a>
+                        <a href="{% url 'main' %}" class="btn btn-primary">Cancel</a>
+                        <input type="hidden" name="next" value="{{ next }}"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
