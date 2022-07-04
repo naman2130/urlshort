@@ -1,6 +1,3 @@
-# Tally Hackathon URL Shortner
-Web service to shorten links with statistics of clicks in the last 30 days.
-
 # Steps to setup the repo on your local device
 1. Clone the repo on your local machine.
 2. Install the Python on your local machine.
